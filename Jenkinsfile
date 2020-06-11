@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 powershell 'java -version'
-				powershell 'mvn -version'
+		powershell 'mvn -version'
             }
         }
         stage('Test') {
