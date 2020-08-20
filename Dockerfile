@@ -1,8 +1,3 @@
-FROM ubuntu:14.04
+FROM tomcat:9.0
 
-RUN apt-get update -y
-RUN apt-get install openjdk-7-jre -y
-RUN apt-get install tomcat7 -y
-
-EXPOSE 8080
-CMD sleep 1500
+COPY ./web/target/*.war /usr/local/tomcat/webapps/ROOT.war
